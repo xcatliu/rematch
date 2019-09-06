@@ -16,5 +16,9 @@ export const sharks = {
 			await delay(500)
 			dispatch.sharks.increment(payload || rootState.sharks)
 		},
+		async doubleAsync(_payload: any, rootState: RootState) {
+			await delay(500)
+			dispatch.sharks.increment(rootState.sharks)
+		}
 	}),
 }

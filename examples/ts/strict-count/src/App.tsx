@@ -14,6 +14,7 @@ const mapDispatch = (dispatch: RootDispatch) => ({
 	incrementSharks: () => dispatch.sharks.increment(1),
 	incrementSharksAsync: () => dispatch.sharks.incrementAsync(1),
 	incrementSharksAsync2: () => dispatch.sharks.incrementAsync(2),
+	doubleAsync: () => dispatch.sharks.doubleAsync()
 })
 
 export default function Count() {
@@ -25,6 +26,7 @@ export default function Count() {
 		incrementSharks,
 		incrementSharksAsync,
 		incrementSharksAsync2,
+		doubleAsync
 	} = mapDispatch(dispatch)
 
 	return (
@@ -41,6 +43,7 @@ export default function Count() {
 				<button onClick={incrementSharks}>+1</button>
 				<button onClick={incrementSharksAsync}>Async +1</button>
 				<button onClick={incrementSharksAsync2}>Async +2</button>
+				<button onClick={doubleAsync}>Async double</button>
 			</div>
 			<p>Using Rematch Models</p>
 		</div>
